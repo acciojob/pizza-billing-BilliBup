@@ -40,29 +40,29 @@ public class Pizza {
     public String getBill(){
         int total = this.price;
         bill = "";
-        bill += "Base Price Of The Pizza: " +this.price+ "\n";
+        bill += "Base Price Of The Pizza:  " +this.price+ "\n";
 
         if (this.extraCheese){
-            bill += "Extra Cheese Added: " +80+ "\n";
+            bill += "Extra Cheese Added:  " +80+ "\n";
             total+= 80;
         }
         if(this.extraToppings) {
             if (isVeg) {
-                bill += "Extra Toppings Added: " +70+ "\n";
+                bill += "Extra Toppings Added:  " +70+ "\n";
                 total += 70;
             }
 
             else{
-                bill += "Extra Toppings Added: " +120+ "\n";
+                bill += "Extra Toppings Added:  " +120+ "\n";
                 total += 120;
             }
 
         }
         if(this.takeaway){
-            bill += "Paperbag Added: " +20+ "\n";
+            bill += "Paperbag Added:  " +20+ "\n";
             total+=20;
         }
-        bill += "Total Price: " +total+ "\n";
+        bill += "Total Price:  " +total+ "\n";
         return this.bill;
     }
 }
