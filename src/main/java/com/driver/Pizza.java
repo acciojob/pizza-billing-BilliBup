@@ -19,7 +19,23 @@ public class Pizza {
     }
 
     public int getPrice(){
-        return this.price;
+        int total = this.price;
+
+        if (this.extraCheese){
+            total+= 80;
+        }
+        if(this.extraToppings) {
+            if (isVeg) {
+                total += 70;
+            }
+            else{
+                total += 120;
+            }
+        }
+        if(this.takeaway){
+            total+=20;
+        }
+        return total;
     }
 
     public void addExtraCheese(){
